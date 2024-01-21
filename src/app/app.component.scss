@@ -1,0 +1,127 @@
+.container {
+  min-height: 100vh;
+  padding: 40px;
+  @media screen and (max-width: 580px) {
+    padding: 15px;
+  }
+}
+
+.questions {
+  margin-bottom: 60px;
+
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .question {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .option {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+
+.btn-grad {
+  cursor: pointer;
+  background: linear-gradient(240deg, #0057B7, #FFDD00);
+  background-size: 200% 200%;
+  animation: changeBg 2s ease infinite;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  color: white;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  display: block;
+  border: unset;
+
+  &:disabled {
+    background: rgba(0, 0, 0, .12);;
+    color: rgba(0, 0, 0, .38);;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes changeBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header-text {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.sub-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  margin-bottom: 25px;
+}
+
+.thanks-illustration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+.illustrations-container {
+  margin-bottom: 50px;
+  border: 1px solid black;
+
+  .illustration-row {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    &__img {
+      width: 200px;
+
+      img {
+        width: 200px;
+      }
+
+      @media screen and (max-width: 599px) {
+        flex: 1;
+        width: auto;
+      }
+    }
+
+    &__description {
+      flex: 1;
+      padding: 5px;
+      border-left: 1px solid black;
+    }
+  }
+}
+

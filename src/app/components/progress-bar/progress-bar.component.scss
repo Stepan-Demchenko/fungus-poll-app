@@ -1,0 +1,19 @@
+.progressBar-container {
+  border: 1px solid #0057B7;
+  transition: 0.5s;
+  position: relative;
+
+  &__bar {
+    width: 0;
+    height: 25px;
+    transition: 0.5s;
+    background: linear-gradient(90deg, #0057B7, #FFDD00);
+  }
+
+  &__progress-info {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    color: #0057B7;
+  }
+}

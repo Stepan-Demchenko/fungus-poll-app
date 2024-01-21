@@ -1,0 +1,41 @@
+.table-questions {
+  display: grid;
+  grid-template-areas:
+    "question-1 question-2 question-3 question-4"
+    "option-1   option-2   option-3   option-4";
+  border: 1px solid black;
+
+  @media screen and (max-width: 590px) {
+    grid-template-areas:
+    "question-1 question-2"
+    "option-1   option-2"
+    "question-3 question-4"
+    "option-3   option-4";
+  }
+
+  .cell {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .option {
+    border-bottom: 1px solid black;
+    padding: 5px;
+
+    .select {
+      width: 100%;
+      padding: 5px;
+      height: 40px;
+    }
+  }
+
+  .option:last-child {
+    border-bottom: unset;
+  }
+}
+
+.title {
+  border: 1px solid black;
+  text-transform: uppercase;
+  text-align: center;
+}

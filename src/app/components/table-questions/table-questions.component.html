@@ -1,0 +1,21 @@
+<p class="title"><ng-content select="[title]"></ng-content></p>
+<section class="table-questions">
+  @for (question of questions; track $index) {
+    <section class="cell" [ngStyle]="{'grid-area': 'question-' + ($index+1)}">
+      {{question}}
+    </section>
+  }
+  @for (option of [1,2,3,4]; track option; let optionIndex = $index) {
+    <section class="cell" [ngStyle]="{'grid-area': 'option-' + (optionIndex+1)}">
+        <div class="option">
+          <select class="select" (change)="selectOption('question'+(optionIndex+1),  $event)">
+            <option [value]="null">Оберіь ціну</option>
+            @for (answer of answerOptions; track $index) {
+              <option [value]="answer.value" [disabled]="answer.selected">{{answer.option}}</option>
+            }
+          </select>
+        </div>
+    </section>
+    }
+</section>
+
